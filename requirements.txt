@@ -2,7 +2,6 @@ Flask
 itsdangerous
 Jinja2
 Keras-Preprocessing
-sklearn
 streamlit
 tensorboard
 tensorboard-plugin-wit
