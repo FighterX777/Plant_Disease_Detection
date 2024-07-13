@@ -1,0 +1,744 @@
+<html>
+<head>
+  <title>Crop Detection</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+<style>
+body  {
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+#engine {
+    background-image: url('static/images/wooden2.jpg');
+    background-size:cover ;
+    background-repeat: no-repeat;
+}
+* {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+
+        }
+
+
+
+        .form2 {
+            display: flex;
+            height: 85vh;
+            justify-content: center;
+            align-items: center;
+            margin-top: -150px;
+            width: 60%;
+            text-align: center;
+			margin-left:300px;
+
+        }
+
+
+        .details h2 {
+
+            position: relative;
+            top: 100px;
+            margin: auto;
+            color: rgb(18, 231, 231);
+            font-size: 3rem;
+        }
+
+        label:hover {
+            transform: scale(1.03);
+        }
+
+        .details h2 {
+            /* margin-bottom: 300px; */
+            position: relative;
+            top: 100px;
+            margin: auto;
+            color: rgb(18, 231, 231);
+            font-size: 3rem;
+
+        }
+
+
+
+
+        .details h1 {
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: rgb(8, 8, 8);
+        }
+
+
+        .upload {
+
+            font-size: 20px;
+            background-color: rgb(255, 252, 252);
+            border-radius: 20px;
+            outline: none;
+            width: 500px;
+            color: rgb(0, 0, 0);
+            border: 3px solid rgb(45, 47, 49);
+
+
+
+        }
+
+        ::-webkit-file-upload-button {
+            color: rgb(255, 252, 252);
+            padding: 20px;
+            border: 2px solid rgb(120, 40, 218);
+            background-color: rgb(120, 40, 218);
+            border-radius: 15px;
+
+        }
+
+        ::-webkit-file-upload-button:hover {
+            border-radius: 20px;
+            border: 2px solid rgb(177, 174, 174);
+
+
+        }
+
+
+
+        input[type="submit"] {
+            position: absolute;
+            margin-top: 200px;
+            padding: 15px 35px;
+            background-color: rgb(120, 40, 218);
+            border-radius: 15px;
+            color: white;
+            font-size: 1.5rem;
+            border: 2px solid rgb(0, 0, 0);
+
+        }
+
+        input:hover{
+            border: 2px solid rgb(255, 252, 252);
+        }
+</style>
+</head>
+<body >
+      <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo" style="text-transform: lowercase;font-family:capitalize;"><b><i><a href="index.html">🍀CropDetection</a></i></b></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#engine">AI Engine</a></li>
+          <li><a class="nav-link scrollto" href="#features">About</a></li>
+          <li><a class="nav-link scrollto" href="#testimonials">Supplements</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Categories</a></li>
+          <li><a class="nav-link scrollto " href="#faq">FAQ</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="#engine">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+<section  id="hero" class="d-flex align-items-center">
+
+    <div class="container-fluid" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1 style="font-size: 50px;">Crop Disease Detection</h1>
+            <h2>Let AI Engine help you to detect disease in crops.</h2>
+            <div><a href="#engine" class="btn-get-started scrollto">Get Started</a></div>
+          </div>
+          <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
+            <img src="static/pngfind.com-hand-reaching-out-png-2544048.png" class="img-fluid animated" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="engine">
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Predict Crop Disease & Get a Cure</h1>
+        <form class="form2" action="/predict" method="post" enctype="multipart/form-data" onsubmit="showloading()">
+
+            <input type="file" name="image" class="upload">
+            <br>
+            <br>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+    </section>
+
+    <main id="main">
+
+
+        <!-- ======= Features Section ======= -->
+        <section id="features" class="features">
+          <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+              <h2>About</h2>
+              <p> </p>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column align-items-lg-center">
+
+                <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-receipt"></i>
+                  <h4>Introduction</h4>
+                  <p>Plant and crop cultivation rates are rapidly increasing as human and animal demands increase all over the world. But, plant disease is a persistent problem for smallholder farmers, threatening their income and food security. We can use technologies such as image processing and deep learning to successfully detect plant diseases in their early stages.</p>
+                </div>
+
+                <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bx bx-cube-alt"></i>
+                  <h4>Disease</h4>
+                  <p>Plant disease is a disturbance in a plant's normal state that disrupts or modifies its vital functions. Plant diseases are classified broadly based on the nature of their primary causal agent, infectious or non-infectious.Some examples of diseases are Tomato_Bacterial_spot,Tomato_Early_blight.</p>
+                </div>
+                <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bx bx-images"></i>
+                  <h4>Pesticides</h4>
+                  <p>Pesticides are used to protect crops from these infestations and thus maintain yields. But use of these chemicals has a negative impact on biodiversity, including insect, bird, and fish populations, as well as soil, air, and water quality.</p>
+                </div>
+                <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bx bx-shield"></i>
+                  <h4>Plant Disease Detection System</h4>
+                  <p>We created a plant detection system based on Convolutional Neural Networks that predicts plant disease based on the image uploaded by the farmer. This proposed work is less time-consuming, free of charge, and accurate, making it suitable for use in real-time. In recent years, the use of CNNs in plant disease classification has yielded excellent results.</p>
+                </div>
+
+              </div>
+              <div class="image col-lg-6 order-1 order-lg-2 " data-aos="zoom-in" data-aos-delay="90">
+                <img src="static/assets/img/kindpng_2264044.png" alt="" class="img-fluid">
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+        </section><!-- End About Section -->
+
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
+                <img src="static/assets/img/about.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+                <h3>Prevent Plant Disease by following below steps:</h3>
+                <br>
+                <ul>
+                  <li><i class="bi bi-check-circle"></i> Follow Good Sanitation Practices.</li>
+                  <li><i class="bi bi-check-circle"></i> Fertilize to Keep Your Plants Healthy.</li>
+                  <li><i class="bi bi-check-circle"></i> Inspect Plants for Diseases Before You Bring Them Home.</li>
+                  <li><i class="bi bi-check-circle"></i> Allow the Soil to Warm Before Planting.</li>
+                  <li><i class="bi bi-check-circle"></i> Ensure a Healthy Vegetable Garden By Rotating Crops.</li>
+                  <li><i class="bi bi-check-circle"></i> Provide Good Air Circulation.</li>
+                  <li><i class="bi bi-check-circle"></i> Remove Diseased Stems and Foliage.</li>
+                </ul>
+                <a href="https://www.britannica.com/science/plant-disease/Chemical-control" class="read-more">Read More <i class="bi bi-long-arrow-right"></i></a>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+        </section><!-- End Features Section -->
+
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials section-bg">
+          <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+              <h2>Supplements</h2>
+
+            </div>
+
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      Copper fungicides are the most commonly recommended treatment for bacterial leaf spot. Controls plant diseases - Liquid Copper Fungicide helps black spot, peach leaf curl, rust, and many other.Use it as a preventive measure before or after a rain.Spray with copper fungicide for a seven- to 10-day period, then spray again for one week after plants are moved into the field.<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <img src="static/assets/img/testimonials/61p-PJ2oQDL._SL1000_.jpg" class="testimonial-img" alt="">
+                    <h3>Copper fungicides
+                    <div class="btn-wrap">
+                      <a href="https://www.amazon.com/Bonide-811-Copper-Fungicide-473ML/dp/B00BSULSHA" class="btn-buy">Buy Now</a>
+                    </div>
+                    </h3>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      Daconil Fungicide Concentrate and its easy-to-use measuring cap make effective treatment simple.Controls/Stops and Prevents over 75 Diseases including Tomato Blight, Mold, Powdery Mildew, and more. You can prevent stop or control active fungal diseases on vegetables, fruits, roses, flowers, shrubs, ornamental trees and conifers. It's rain-proof protection you can trust.
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <img src="static/assets/img/testimonials/Daconil-Concentrate-16-oz-1.jpg" class="testimonial-img" alt="">
+                    <h3>Daconil Fungicide Concentrate
+                      <div class="btn-wrap">
+                        <a href="https://www.domyown.com/garden-tech-daconil-fungicide-concentrate-p-8930.html" class="btn-buy">Buy Now</a>
+                      </div>
+                    </h3>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      Dhanuka M-45 (Mancozeb 75% WP) is a contact fungicide of Dithiocarbamate group, which checks the growth of fungus and spread of diseases.It can be used repeatedly, without any danger of resistance development, for number of years.. Used to disease control and treatment of Target_Spot etc, it also provides manganese and zinc in traces to crop, there by keeps plants green and healthy.
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <img src="static/assets/img/testimonials/wpqcECb6dzxcA2HF5Gaw.png" class="testimonial-img" alt="">
+                    <h3>Dhanuka M-45
+                      <div class="btn-wrap">
+                        <a href="https://www.dhanuka.com/fungicide/dhanuka-m-45" class="btn-buy">Buy Now</a>
+                      </div>
+                    </h3>
+
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      Econeem Plus is the neem based biopesticide extract of natural neem and contains triterpenoids & Azadirachtin are very effective against insects & yet are safe to human beings,animals and also eniveroments,it is a multiple mode of action the product is well suitable in insect resistance managemant programes.Treatment of Crops: Tomato, Brinjal, Chili,soyabens.
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <img src="static/assets/img/testimonials/PicsArt_07-31-02.25.38.jpg" class="testimonial-img" alt="">
+                    <h3>ECONEEM - AZADIRACHTIN 3000 PPM
+                      <div class="btn-wrap">
+                        <a href="https://kisandarshan.in/product/econeem-plus-azadirachtin-10000-ppm-biopesticide/" class="btn-buy">Buy Now</a>
+                      </div>
+                    </h3>
+
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      Safer Brand Insecticidal Soap & Pyrethrin Concentrate - 32 Oz Kills listed hard and soft bodied insects such as aphids and mites.It makes up to 5 gallons of insecticidal soap and pyrethrin to eliminate a variety of listed hard and soft-bodied insects on contact. This OMRI Listed® insect killer treats up to 3,600 sq ft.It is compliant for use in organic gardening and farming.
+
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <img src="static/assets/img/testimonials/567gal-32_d_1.jpg" class="testimonial-img" alt="">
+                    <h3>Insecticidal Soap
+                      <div class="btn-wrap">
+                        <a href="https://www.saferbrand.com/safer-brand-insecticidal-soap-and-pyrethrin-concentrate-32-oz-567gal-32" class="btn-buy">Buy Now</a>
+                      </div>
+                    </h3>
+
+                  </div>
+                </div><!-- End testimonial item -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
+        </section><!-- End Testimonials Section -->
+
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio">
+          <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+              <h2>Categories</h2>
+
+            </div>
+
+            <div class="row">
+              <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="portfolio-flters">
+                  <li data-filter="*" class="filter-active">All</li>
+                  <li data-filter=".filter-tomato">Tomato</li>
+                  <li data-filter=".filter-potato">Potato</li>
+                  <li data-filter=".filter-apple">Apple</li>
+                  <li data-filter=".filter-blueberry">Blueberry</li>
+                  <li data-filter=".filter-cherry">Cherry</li>
+                  <li data-filter=".filter-corn">Corn</li>
+                  <li data-filter=".filter-grape">Grape</li>
+                  <li data-filter=".filter-orange">Orange</li>
+                  <li data-filter=".filter-peach">Peach</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="row portfolio-container">
+
+              <div class="col-lg-4 col-md-6 portfolio-item filter-tomato">
+                <div class="portfolio-wrap">
+                  <img src="https://images-prod.healthline.com/hlcmsresource/images/AN_images/tomatoes-1296x728-feature.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Tomato</h4>
+                  </div>
+                  <div class="portfolio-links">
+                    <a href="https://images-prod.healthline.com/hlcmsresource/images/AN_images/tomatoes-1296x728-feature.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Tomato"><i class="bx bx-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item filter-potato">
+                <div class="portfolio-wrap">
+                  <img src="https://m.economictimes.com/thumb/height-450,width-600,imgsize-111140,msid-72862126/potato-getty.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Potato</h4>
+                  </div>
+                  <div class="portfolio-links">
+                    <a href="https://m.economictimes.com/thumb/height-450,width-600,imgsize-111140,msid-72862126/potato-getty.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Potato"><i class="bx bx-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item filter-apple">
+                <div class="portfolio-wrap">
+                  <img src="https://post.healthline.com/wp-content/uploads/2020/09/Do_Apples_Affect_Diabetes_and_Blood_Sugar_Levels-732x549-thumbnail-1-732x549.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Apple</h4>
+                  </div>
+                  <div class="portfolio-links">
+                    <a href="https://post.healthline.com/wp-content/uploads/2020/09/Do_Apples_Affect_Diabetes_and_Blood_Sugar_Levels-732x549-thumbnail-1-732x549.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Apple"><i class="bx bx-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item filter-blueberry">
+                <div class="portfolio-wrap">
+                  <img src="https://www.supermarketperimeter.com/ext/resources/0430-blueberries.png?t=1588260305&width=1080" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Blueberry</h4>
+                  </div>
+                  <div class="portfolio-links">
+                    <a href="https://www.supermarketperimeter.com/ext/resources/0430-blueberries.png?t=1588260305&width=1080" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Blueberry"><i class="bx bx-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item filter-cherry">
+                <div class="portfolio-wrap">
+                  <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/health_benefits_of_cherries_slideshow/1800x1200_health_benefits_of_cherries_slideshow.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Cherry</h4>
+                  </div>
+                  <div class="portfolio-links">
+                    <a href="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/health_benefits_of_cherries_slideshow/1800x1200_health_benefits_of_cherries_slideshow.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item filter-corn">
+                <div class="portfolio-wrap">
+                  <img src="https://www.mayoclinichealthsystem.org/-/media/national-files/images/hometown-health/2018/corn.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Corn</h4>
+                  </div>
+                  <div class="portfolio-links">
+                    <a href="https://www.mayoclinichealthsystem.org/-/media/national-files/images/hometown-health/2018/corn.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Corn"><i class="bx bx-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item filter-grape">
+                <div class="portfolio-wrap">
+                  <img src="https://i.ndtvimg.com/i/2015-09/grapes_625x350_61443376353.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Grape</h4>
+                  </div>
+                  <div class="portfolio-links">
+                    <a href="https://i.ndtvimg.com/i/2015-09/grapes_625x350_61443376353.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Grape"><i class="bx bx-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item filter-orange">
+                <div class="portfolio-wrap">
+                  <img src="https://www.irishtimes.com/polopoly_fs/1.3923226.1560339148!/image/image.jpg_gen/derivatives/ratio_1x1_w1200/image.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Orange</h4>
+                  </div>
+                  <div class="portfolio-links">
+                    <a href="https://www.irishtimes.com/polopoly_fs/1.3923226.1560339148!/image/image.jpg_gen/derivatives/ratio_1x1_w1200/image.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Orange"><i class="bx bx-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item filter-peach">
+                <div class="portfolio-wrap">
+                  <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/the_health_benefits_of_peaches_slideshow/thinkstock_rf_peaches.jpg?resize=650px:*" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Peach</h4>
+                  </div>
+                  <div class="portfolio-links">
+                    <a href="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/the_health_benefits_of_peaches_slideshow/thinkstock_rf_peaches.jpg?resize=650px:*" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Peach"><i class="bx bx-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </section><!-- End Portfolio Section -->
+
+
+        <!-- ======= Frequently Asked Questions Section ======= -->
+        <section id="faq" class="faq">
+          <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+              <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-list">
+              <ul>
+                <li data-aos="fade-up" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Why is it necessary to detect disease in plant?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                    <p>
+                      Plant diseases affect the growth of their respective species. In addition, some research gaps are
+                        identified from which to obtain greater transparency for detecting diseases in plants, even
+                        before their symptoms appear clearly.
+                        diagnosis is one of the most important aspects of a plant pathologist's training. Without proper
+                        identification of the disease and the disease-causing agent, disease control measures can be a
+                        waste of time and money and can lead to further plant losses. Proper disease diagnosis is
+                        necessary.
+                    </p>
+                  </div>
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="200">
+                  <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Do we really need deep CNN for plant diseases identification? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                    <p>
+                      Timely and early identification of plant diseases is helpful for farmers to make fast decisions to protect the agricultural yield and quality. In this paper, we proposed two methods, namely SCNN-KSVM and SCNN-RF, to recognize the plant diseases based on the shallow CNN.
+                    </p>
+                  </div>
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="300">
+                  <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">How are plant diseases detected? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                    <p>
+                      Diseased plants can be identified by abnormal growth or by signs of the disease-causing organism, such as bacterial slime (an external sign of a disease called bacterial wet wood) or insect larvae which hatches from eggs and feeds on leaves.
+                    </p>
+                  </div>
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="400">
+                  <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">What are the types of plant diseases? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                    <p>
+                      Common Plant Diseases are Black Spot,Other Leaf Spots,Powdery Mildew,Downy Mildew,Blight,Canker etc.
+                    </p>
+                  </div>
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="500">
+                  <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">How can you prevent plant disease from spreading? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                    <p>
+                      Understand the mechanism of infection.Choose the right plants for your site.Use disease-resistant varieties.Keep a clean garden: roguing, rotating crops, and sanitizing tools.Create a well-balanced soil.Keep plants healthy: proper watering, mulching, pruning, and fertilizing.
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+        </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+        <div class="container" data-aos="fade-up">
+
+          <div class="section-title">
+            <h2>Contact</h2>
+
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="info-box mb-4">
+                <i class="bx bx-map"></i>
+                <h3>Our Address</h3>
+                <p> ABESIT GROUP OF INSTITUTIONS, ABESIT Campus Rd, near Crossing Republik, NE-3, Crossings Republik, Ghaziabad, Uttar Pradesh 201009</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="info-box  mb-4">
+                <i class="bx bx-envelope"></i>
+                <h3>Email Us</h3>
+                <p>threastymucha@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="info-box  mb-4">
+                <i class="bx bx-phone-call"></i>
+                <h3>Call Us</h3>
+                <p>+91 8595630567</p>
+                <p>+91 8303063998</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-lg-6 ">
+              <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.871565036867!2d77.44510511026448!3d28.63361117556261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cee3d4e3485ed%3A0xe0fe1689b57c7d2e!2sABESIT%20GROUP%20OF%20INSTITUTIONS!5e0!3m2!1sen!2sin!4v1716820249721!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-lg-6">
+              <form name="google-sheet" action="null" method="post" role="form" class="php-email-form"  data-sb-form-api-token="API_TOKEN">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="Name" class="form-control" id="Name" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="E-mail" id="E-mail" placeholder="Your Email" required>
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="Subject" id="Subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" id="Message" name="Message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="text-center"><button id="submit" type="submit">Send Message</button></div>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>Address</h3>
+              <p>
+              ABESIT GROUP OF INSTITUTIONS, <br>
+              ABESIT Campus Rd, near Crossing Republik, NE-3, Crossings Republik, Ghaziabad
+              Uttar Pradesh 201009<br><br>
+                <strong>Phone:</strong> 08448583370<br>
+
+              </p>
+            </div>
+            <div style="width: 390px;" class="col-lg-2 col-md-6 width1 footer-links">
+              <h3>CONTACT US</h3><br>
+              <h4>Amol Gupta</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#"><strong>Email: </strong> amolguptaid@gmail.com</a></li>
+
+                <li><i class="bx bx-chevron-right"></i> <a href="#"><strong>Phone: </strong> 8595630567</a></li>
+
+              </ul><br>
+              <h4>Amrita Singh</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#"><strong>Email: </strong> amrita98shalu@gmail.com</a></li>
+
+                <li><i class="bx bx-chevron-right"></i> <a href="#"><strong>Phone:</strong> 8303063998</a></li>
+
+              </ul>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+
+        <div class="copyright-wrap d-md-flex py-4">
+          <div class="me-md-auto text-center text-md-start">
+            <div class="copyright">
+              Created by <strong><span>Amol Gupta and Amrita SIngh</span></strong>
+            </div>
+
+          </div>
+        
+        </div>
+
+      </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxvqQzQMWrqtSzT3t-DJhgOQT-4cq3CTJsfUrUZ1OKahpplay0U9YPabhD7K2YQnMrODg/exec'
+      const form = document.forms['google-sheet']
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => alert("Thanks for Contacting us..!"))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+    <!-- Vendor JS Files -->
+    <script src="static/assets/vendor/purecounter/purecounter.js"></script>
+    <script src="static/assets/vendor/aos/aos.js"></script>
+    <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="static/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="static/assets/js/main.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+</body>
+</html>
