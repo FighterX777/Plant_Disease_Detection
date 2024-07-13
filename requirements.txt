@@ -2,12 +2,6 @@ Flask
 itsdangerous
 Jinja2
 Keras-Preprocessing
-matplotlib
-matplotlib-inline
-MarkupSafe
-numpy
-scikit-learn
-scipy
 sklearn
 streamlit
 tensorboard
@@ -17,3 +11,9 @@ tensorflow-estimator
 Werkzeug
 numpy
 pandas
+matplotlib
+matplotlib-inline
+MarkupSafe
+numpy
+scikit-learn
+scipy
