@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>LEAF DISEASE PREDICTION</title>
+
+    <style>
+    #engine {
+        background-image: url('static/images/back3.jpg');
+        background-size:cover ;
+        background-repeat: no-repeat;
+    }
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+
+
+
+                .form2 {
+                    display: flex;
+                    height: 85vh;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: -150px;
+                    width: 60%;
+                    text-align: center;
+        			margin-left:300px;
+
+                }
+
+
+                .details h2 {
+
+                    position: relative;
+                    top: 100px;
+                    margin: auto;
+                    color: rgb(18, 231, 231);
+                    font-size: 3rem;
+                }
+
+                label:hover {
+                    transform: scale(1.03);
+                }
+
+                .details h2 {
+                    /* margin-bottom: 300px; */
+                    position: relative;
+                    top: 100px;
+                    margin: auto;
+                    color: rgb(18, 231, 231);
+                    font-size: 3rem;
+
+                }
+
+
+
+
+                .details h1 {
+                    color: white;
+                    padding: 20px;
+                    border-radius: 15px;
+                    background-color: rgb(8, 8, 8);
+                }
+
+
+                .upload {
+
+                    font-size: 20px;
+                    background-color: rgb(255, 252, 252);
+                    border-radius: 20px;
+                    outline: none;
+                    width: 500px;
+                    color: rgb(0, 0, 0);
+                    border: 3px solid rgb(45, 47, 49);
+
+
+
+                }
+
+                ::-webkit-file-upload-button {
+                    color: rgb(255, 252, 252);
+                    padding: 20px;
+                    border: 2px solid rgb(120, 40, 218);
+                    background-color: rgb(120, 40, 218);
+                    border-radius: 15px;
+
+                }
+
+                ::-webkit-file-upload-button:hover {
+                    border-radius: 20px;
+                    border: 2px solid rgb(177, 174, 174);
+
+
+                }
+
+
+
+                input[type="submit"] {
+                    position: absolute;
+                    margin-top: 200px;
+                    padding: 15px 35px;
+                    background-color: rgb(120, 40, 218);
+                    border-radius: 15px;
+                    color: white;
+                    font-size: 1.5rem;
+                    border: 2px solid rgb(0, 0, 0);
+
+                }
+
+                input:hover{
+                    border: 2px solid rgb(255, 252, 252);
+                }
+
+    </style>
+</head>
+
+
+
+
+<section id="engine">
+    <div>
+        <h1 style="padding-top:50px;text-align:center;font-size:4rem">Predict Leaf Disease & Get Cure</h1>
+    </div>
+
+   <br>
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/Tomato___Early_blight.JPG' )}}" alt="User Image" style="width:500px;height:500px;">
+
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+
+					<h4><b> Treatment : </b> </h4>
+                    <h6>
+
+
+
+                        Tomatoes that have early blight require immediate attention before the disease takes over the plants. Thoroughly spray the plant (bottoms of leaves also) with Bonide Liquid Copper Fungicide concentrate or Bonide Tomato & Vegetable. Both of these treatments are organic..</br></br>
+
+
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+  </section>
+</body>
+
+</html>
