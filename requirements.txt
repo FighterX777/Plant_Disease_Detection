@@ -16,3 +16,4 @@ MarkupSafe
 numpy
 scikit-learn
 scipy
+tensorrt
