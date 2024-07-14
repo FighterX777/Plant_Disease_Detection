@@ -5,3 +5,4 @@ opencv_python==4.5.3.56
 scikit_learn==0.23.1
 tensorflow==2.7.0
 protobuf<=3.20.1
+watchdog
