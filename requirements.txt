@@ -5,4 +5,5 @@ opencv_python
 tensorflow
 protobuf
 watchdog
+pillow
 gdown
