@@ -87,5 +87,4 @@ def predict():
         return render_template(output_page, pred_output = pred, user_image = file_path)
 
 
-if __name__ == "__main__":
-    app.run(debug=True,threaded=False,host='0.0.0.0')
+
