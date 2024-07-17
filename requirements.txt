@@ -3,7 +3,7 @@ matplotlib==3.2.2
 numpy
 opencv_python
 scikit-learn==0.24.1
-tensorflow==2.7.0
+tensorflow
 protobuf<=3.20.1
 watchdog
 gdown
