@@ -4,6 +4,6 @@ numpy
 opencv_python
 scikit-learn==0.24.1
 tensorflow
-protobuf<=3.20.1
+protobuf
 watchdog
 gdown
