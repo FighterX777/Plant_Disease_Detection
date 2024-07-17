@@ -2,7 +2,7 @@ Flask>=2.2.2
 matplotlib==3.2.2
 numpy
 opencv_python
-scikit_learn
+scikit-learn==0.24.1
 tensorflow==2.7.0
 protobuf<=3.20.1
 watchdog
