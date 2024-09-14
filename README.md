@@ -1,3 +1,5 @@
+Website link: https://plant-disease-detection-7man.onrender.com/
+
 Problem:
 
 In agriculture, plant diseases pose a significant threat to crop yield and quality. Early and accurate identification of diseases is crucial for effective management and prevention, but traditional methods often rely on visual inspections by experts, which can be time-consuming and prone to human error. Farmers and agricultural workers need a more efficient and reliable solution to diagnose crop diseases quickly.
